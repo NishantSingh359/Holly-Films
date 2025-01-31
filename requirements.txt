@@ -1,6 +1,7 @@
 streamlit
 pandas
 numpy
+gdown
 duckduckgo-search
 rich==13.9.4
 pygments==2.19.1
