@@ -1,7 +1,6 @@
 streamlit
 pandas
 numpy
-pickle
 duckduckgo-search
 rich==13.9.4
 pygments==2.19.1
