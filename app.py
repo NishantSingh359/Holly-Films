@@ -230,7 +230,7 @@ movies = pd.DataFrame(movies_dict)
 
 
 import os
-import gdown
+
 # Google Drive file ID for `similarity.pkl`
 file_id = "1iwapAB_sL9bvpRu-CXbCO5Nt0ArgXwGI"
 download_url = f"https://drive.google.com/uc?id={file_id}"
