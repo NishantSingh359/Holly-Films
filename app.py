@@ -229,26 +229,17 @@ movies = pd.DataFrame(movies_dict)
 # similarity = pickle.load(open('similarity.pkl', 'rb'))
 
 
-import os
+import requests
 
-# Google Drive file ID for `similarity.pkl`
-file_id = "1iwapAB_sL9bvpRu-CXbCO5Nt0ArgXwGI"
-download_url = f"https://drive.google.com/uc?id={file_id}"
-file_path = "similarity.pkl"  # Local file path
+def download_file():
+    url = "https://drive.google.com/uc?id=1iwapAB_sL9bvpRu-CXbCO5Nt0ArgXwGI"
+    file_path = "/tmp/similarity.pkl"
 
-@st.cache_resource
-def load_similarity():
-    """Downloads and loads the similarity.pkl file."""
-    # Download if not already available
-    if not os.path.exists(file_path):
-        st.info("Downloading similarity.pkl from Google Drive...")
-        gdown.download(download_url, file_path, quiet=False)
-    # Load the pickle file
-    with open(file_path, "rb") as f:
-        similarity = pickle.load(f)
-
-    return similarity
-similarity = load_similarity()
+    response = requests.get(url, stream=True)
+    if response.status_code == 200:
+        with open(file_path, "wb") as f:
+            for chunk in response.iter_content(1024):
+similarity = download_file()
 
 
 col1, col2 =  st.columns([2,1])
