@@ -1,5 +1,4 @@
 import streamlit as st
-import pickle
 import pandas as pd
 import requests
 
@@ -228,8 +227,7 @@ movies_dict = pickle.load(open('movie recomme.pkl', 'rb'))
 movies = pd.DataFrame(movies_dict)
 # similarity = pickle.load(open('similarity.pkl', 'rb'))
 
-import gdown
-import pickle
+
 import os
 
 # Google Drive file ID for `similarity.pkl`
