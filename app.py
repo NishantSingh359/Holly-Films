@@ -243,7 +243,6 @@ def load_similarity():
     """Downloads and loads the similarity.pkl file."""
     # Download if not already available
     if not os.path.exists(file_path):
-        st.info("Downloading similarity.pkl from Google Drive...")
         gdown.download(download_url, file_path, quiet=False)
     # Load the pickle file
     with open(file_path, "rb") as f:
