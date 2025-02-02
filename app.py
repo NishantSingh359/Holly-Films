@@ -286,8 +286,9 @@ if input:
                     <div style="display: flex; flex-direction: column;
                          height: 320px;  background-color: #2c2c2c; border-radius: 10px; padding: 10px; margin-top: 10px">
                         <p style="text-align: center; color: white; font-size: 12px;"><strong>in</strong> {year[i]}</p>
-                        <p style="text-align: center; color: white; font-size: 12px;"><strong>Director:</strong> {crew[i][0]}</p>
-                        <p style="text-align: center; color: white; font-size: 12px;"><strong>Cast:</strong> {cast[i][0]} | {cast[i][1]} | {cast[i][2]}</p>
+                         <p style="text-align: center; color: white; font-size: 12px;"><strong>Director:</strong> {crew[i][0] if crew[i] else None}</p>
+                        <p style="text-align: center; color: white; font-size: 12px;"><strong>Cast:</strong> 
+                           {cast[i][0] if crew[i] else None} | {cast[i][1] if crew[i] else None} | {cast[i][2] if crew[i] else None}</p>
                         <p style="text-align: center; color: white; font-size: 12px;"><strong>Running Time:</strong> {run_time[i]}</p>
                         <p style="text-align: center; color: white; font-size: 12px;"><strong>Rating:</strong> {rating[i]}/10</p>
                         <p style="text-align: center; color: white; font-size: 12px;"><strong>Box Office:</strong> {colle[i]}</p>
