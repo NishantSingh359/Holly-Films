@@ -101,7 +101,7 @@ col1, col2, col3 = st.columns(3)
 with col1:
     st.markdown(
         """
-        <a  href="#facts-of-hollywoods" style="text-decoration: none;">
+        <a  href="#about-hollywoods" style="text-decoration: none;">
             <h1 style="width: 100%; text-align: center; color: #d0d0d0; font-size: 12px; margin-bottom: 10px; padding: 3px;
             border-radius: 3px; font-family: 'Poppins', 'Montserrat', sans-serif; font-weight: 500;
             background: linear-gradient(90deg, #0e1117,#232836);">
